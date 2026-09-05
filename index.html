@@ -1,64 +1,128 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MinhShop</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Nền đen sang trọng */
-    body {
-      background-color: #0f1217;
-      color: #e0e6ed;
-    }
+<!-- Thẻ gốc, tiếng Việt -->
 
-    /* Màu vàng kim (Gold) */
+<head>
+  <!-- Phần chứa cấu hình trang web -->
+
+  <meta charset="utf-8">
+  <!-- Hiển thị tiếng Việt không lỗi font -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Vừa vặn màn hình điện thoại -->
+
+  <title>MinhShop</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Nhúng giao diện Bootstrap 5 -->
+
+  <style>
+    /* CSS tùy chỉnh */
+    body {
+      background-color: #0f1217; /* Nền đen xám */
+      color: #e0e6ed;            /* Chữ trắng xám */
+    }
     .text-gold {
-      color: #ffd700 !important;
+      color: #ffd700 !important; /* Chữ màu vàng */
     }
     .btn-gold {
-      background-color: #d4af37;
-      color: #000;
-      font-weight: bold;
-      border: none;
+      background-color: #d4af37; /* Nút màu vàng */
+      color: #000;                /* Chữ đen */
+      font-weight: bold;          /* Chữ in đậm */
+      border: none;               /* Bỏ viền nút */
     }
     .btn-gold:hover {
-      background-color: #ffdf00;
+      background-color: #ffdf00; /* Đổi màu khi di chuột vào nút */
       color: #000;
     }
-
-    /* Khung nội dung màu xanh biển */
     .content-box {
-      background-color: #16222f;
-      border: 1px solid #1d3557;
+      background-color: #16222f; /* Nền xanh biển đậm */
+      border: 1px solid #1d3557; /* Viền mỏng */
     }
   </style>
 </head>
-<body class="d-flex flex-column min-vh-100">
 
-  <!-- HEADER -->
+<body class="d-flex flex-column min-vh-100">
+  <!-- 
+    body: Thẻ chứa nội dung trang
+    d-flex: Bật Flexbox
+    flex-column: Xếp dọc từ trên xuống
+    min-vh-100: Đẩy Footer luôn dính đáy màn hình
+  -->
+
+  <!-- ĐẦU TRANG -->
   <div class="p-3 bg-dark text-center border-bottom border-warning shadow-sm">
+    <!-- 
+      div: Khối chứa
+      p-3: Lề trong mức 3
+      bg-dark: Nền màu tối
+      text-center: Căn giữa chữ
+      border-bottom: Viền dưới
+      border-warning: Viền màu vàng
+      shadow-sm: Đổ bóng nhẹ
+    -->
     <h1 class="m-0 fw-bold text-gold">MinhShop</h1>
+    <!-- 
+      h1: Tiêu đề lớn nhất
+      m-0: Bỏ lề ngoài
+      fw-bold: In đậm chữ
+      text-gold: Chữ màu vàng
+    -->
   </div>
 
-  <!-- BANNER GIỚI THIỆU -->
+  <!-- KHUNG GIỚI THIỆU -->
   <div class="container my-5">
+    <!-- 
+      container: Gom gọn nội dung vào giữa
+      my-5: Lề ngoài trên/dưới mức 5
+    -->
     <div class="p-4 content-box rounded-4 shadow-lg border border-warning opacity-75 text-center">
+      <!-- 
+        p-4: Lề trong mức 4
+        content-box: Khung nền xanh
+        rounded-4: Bo tròn 4 góc
+        shadow-lg: Đổ bóng đậm
+        border border-warning: Viền màu vàng
+        opacity-75: Làm mờ nhẹ 75%
+      -->
       <h2 class="text-gold fw-bold mb-3">Về Chúng Tôi</h2>
+      <!-- 
+        h2: Tiêu đề cấp 2
+        mb-3: Lề ngoài phía dưới mức 3
+      -->
+
       <p class="mb-0 text-light fs-5">MinhShop chuyên cung cấp các sản phẩm công nghệ chính hãng với chất lượng đảm bảo và dịch vụ hỗ trợ chu đáo nhất.</p>
+      <!-- 
+        p: Đoạn văn bản
+        mb-0: Bỏ lề dưới
+        text-light: Chữ màu sáng
+        fs-5: Cỡ chữ mức 5
+      -->
     </div>
   </div>
 
-  <!-- TẠI SAO CHỌN MINHSHOP -->
+  <!-- NỘI DUNG CHÍNH -->
   <div class="container my-4 flex-grow-1">
+    <!-- flex-grow-1: Tự giãn độ cao chiếm chỗ trống -->
+
     <h3 class="text-gold fw-bold text-center mb-4">Tại Sao Chọn MinhShop?</h3>
+    <!-- h3: Tiêu đề cấp 3 | mb-4: Lề dưới mức 4 -->
+
     <div class="row g-4">
+      <!-- 
+        row: Hàng lưới (Grid)
+        g-4: Khoảng cách giữa các cột mức 4
+      -->
 
       <!-- CỘT 1 -->
       <div class="col-md-6">
+        <!-- col-md-6: Chia đôi màn hình (50% độ rộng) -->
         <div class="p-4 content-box rounded-4 shadow-lg h-100 border border-warning opacity-75 text-center">
+          <!-- h-100: Chiều cao 100% bằng cột bên -->
           <h4 class="text-gold fw-bold mb-3">Chính Hãng 100%</h4>
+          <!-- h4: Tiêu đề cấp 4 -->
           <p class="m-0 text-light">Cam kết nguồn gốc xuất xứ rõ ràng và chính sách bảo hành uy tín dài hạn.</p>
+          <!-- m-0: Bỏ lề ngoài -->
         </div>
       </div>
 
@@ -72,16 +136,37 @@
 
     </div>
 
-    <!-- THANH ĐIỀU HƯỚNG -->
+    <!-- CÁC NÚT ĐIỀU HƯỚNG -->
     <div class="d-flex justify-content-center align-items-center gap-2 mt-5">
+      <!-- 
+        d-flex: Bật Flexbox
+        justify-content-center: Căn giữa theo chiều ngang
+        align-items-center: Căn giữa theo chiều dọc
+        gap-2: Khoảng cách giữa 2 nút mức 2
+        mt-5: Lề trên mức 5
+      -->
       <a href="index1.html" class="btn btn-gold px-4">Xem Sản Phẩm</a>
+      <!-- 
+        a: Link chuyển trang
+        href="...": Đường dẫn đích
+        btn: Kiểu nút bấm
+        btn-gold: Nút màu vàng
+        px-4: Lề trong trái/phải mức 4
+      -->
       <a href="index2.html" class="btn btn-outline-info">Liên Hệ Ngay</a>
+      <!-- btn-outline-info: Nút viền màu xanh -->
     </div>
   </div>
 
-  <!-- FOOTER -->
+  <!-- CHÂN TRANG -->
   <footer class="p-3 bg-dark text-center mt-auto border-top border-warning">
+    <!-- 
+      footer: Thẻ chân trang
+      mt-auto: Đẩy footer xuống vị trí thấp nhất
+      border-top: Viền phía trên
+    -->
     <p class="m-0 text-gold font-monospace">©MinhShop</p>
+    <!-- font-monospace: Font chữ phông máy tính -->
   </footer>
 
 </body>

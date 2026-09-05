@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MinhShop</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- FontAwesome Icon 6.4.0 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    /* Nền đen sang trọng */
-    body {
-      background-color: #0f1217;
-      color: #e0e6ed;
-    }
+<!-- Thẻ gốc, ngôn ngữ tiếng Việt -->
 
-    /* Màu vàng kim (Gold) */
+<head>
+  <!-- Chứa cấu hình trang web -->
+
+  <meta charset="utf-8">
+  <!-- Hiển thị tiếng Việt không lỗi font -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Co giãn vừa vặn màn hình điện thoại -->
+
+  <title>MinhShop</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Nhúng thư viện Bootstrap 5 -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Nhúng thư viện icon FontAwesome -->
+
+  <style>
+    /* CSS tùy chỉnh */
+    body {
+      background-color: #0f1217; /* Nền tối */
+      color: #e0e6ed;            /* Chữ sáng */
+    }
     .text-gold {
-      color: #ffd700 !important;
+      color: #ffd700 !important; /* Chữ màu vàng kim */
     }
     .btn-gold {
-      background-color: #d4af37;
-      color: #000;
-      font-weight: bold;
-      border: none;
+      background-color: #d4af37; /* Nút màu vàng */
+      color: #000;                /* Chữ đen */
+      font-weight: bold;          /* Chữ in đậm */
+      border: none;               /* Xóa viền nút */
     }
     .btn-gold:hover {
-      background-color: #ffdf00;
+      background-color: #ffdf00; /* Đổi màu khi di chuột vào nút */
       color: #000;
     }
-
-    /* Khung nội dung màu xanh biển */
     .content-box {
-      background-color: #16222f;
-      border: 1px solid #1d3557;
+      background-color: #16222f; /* Nền khung nội dung */
+      border: 1px solid #1d3557; /* Viền mỏng xanh */
     }
-
-    /* Tùy chỉnh input form trên nền tối */
     .form-control-dark {
-      background-color: #0f1217;
-      color: #ffffff;
-      border: 1px solid #2a3d54;
+      background-color: #0f1217; /* Ô nhập liệu nền tối */
+      color: #ffffff;             /* Chữ nhập vào màu trắng */
+      border: 1px solid #2a3d54;  /* Viền xám xanh */
     }
     .form-control-dark:focus {
       background-color: #0f1217;
       color: #ffffff;
-      border-color: #d4af37;
-      box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+      border-color: #d4af37;     /* Viền sáng vàng khi click chọn */
+      box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25); /* Đổ bóng vàng */
     }
-
-    /* Logo Mạng Xã Hội Có Khung Viền Vuông Bo Góc Sang Trọng */
     .social-icon-bordered {
       width: 38px;
       height: 38px;
@@ -59,41 +63,91 @@
       color: #ffd700;
       background-color: #0f1217;
       border: 1px solid #d4af37;
-      border-radius: 8px; /* Bo góc vuông nhẹ nhàng */
+      border-radius: 8px;        /* Bo tròn nhẹ nút icon */
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: all 0.3s ease; /* Chuyển động mượt */
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     }
-
     .social-icon-bordered:hover {
       color: #000;
       background-color: #ffd700;
       border-color: #ffdf00;
-      transform: translateY(-2px);
+      transform: translateY(-2px); /* Nhô nhẹ lên khi di chuột vào */
       box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
     }
   </style>
 </head>
-<body class="d-flex flex-column min-vh-100">
 
-  <!-- HEADER -->
+<body class="d-flex flex-column min-vh-100">
+  <!-- 
+    body: Thẻ chứa nội dung
+    d-flex: Bật Flexbox
+    flex-column: Xếp dọc các khối
+    min-vh-100: Đẩy Footer luôn dính đáy màn hình
+  -->
+
+  <!-- HEADER (ĐẦU TRANG) -->
   <div class="p-3 bg-dark text-center border-bottom border-warning shadow-sm">
+    <!-- 
+      div: Khối chứa
+      p-3: Lề trong mức 3
+      bg-dark: Nền màu tối
+      text-center: Căn giữa chữ
+      border-bottom: Viền ở cạnh dưới
+      border-warning: Viền màu vàng
+      shadow-sm: Đổ bóng nhẹ
+    -->
     <h1 class="m-0 fw-bold text-gold">MinhShop</h1>
+    <!-- 
+      h1: Tiêu đề lớn nhất
+      m-0: Bỏ lề ngoài
+      fw-bold: Chữ in đậm
+      text-gold: Chữ màu vàng kim
+    -->
   </div>
 
   <!-- NỘI DUNG CHÍNH -->
   <div class="container my-5 flex-grow-1">
+    <!-- 
+      container: Gom gọn nội dung vào giữa
+      my-5: Lề trên/dưới mức 5
+      flex-grow-1: Tự giãn độ cao chiếm khoảng trống
+    -->
     <div class="row g-4">
+      <!-- 
+        row: Hàng trong hệ thống lưới
+        g-4: Khoảng cách giữa các cột mức 4
+      -->
 
-      <!-- CỘT TRÁI: ĐỊA CHỈ, SĐT, GMAIL & MAP -->
+      <!-- CỘT TRÁI: THÔNG TIN LIÊN HỆ & BẢN ĐỒ -->
       <div class="col-md-6">
+        <!-- col-md-6: Chia đôi màn hình (50% độ rộng) -->
         <div class="p-4 content-box rounded-4 shadow-lg h-100 border border-warning opacity-75">
+          <!-- 
+            p-4: Lề trong mức 4
+            content-box: Khung nền xanh
+            rounded-4: Bo tròn 4 góc
+            shadow-lg: Đổ bóng đậm
+            h-100: Chiều cao 100% bằng cột bên
+            border border-warning: Viền màu vàng
+            opacity-75: Làm mờ nhẹ 75%
+          -->
           <h2 class="text-gold fw-bold mb-3">Liên Hệ</h2>
+          <!-- 
+            h2: Tiêu đề cấp 2
+            mb-3: Lề dưới mức 3
+          -->
+
           <p><b class="text-gold">Địa chỉ:</b> 123 Nguyễn Trãi, Q.1, TP.HCM</p>
+          <!-- 
+            p: Đoạn văn
+            b: Thẻ in đậm văn bản
+          -->
+
           <p><b class="text-gold">SĐT:</b> 0909 123 456</p>
           <p><b class="text-gold">Email:</b> minhshop.contact@gmail.com</p>
           
-          <!-- Google Map -->
+          <!-- Bản đồ Google Map -->
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6696086202425!2d106.68006831480063!3d10.762201292330756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1b7c3ed289%3A0xa06648f9a50a10c2!2zTmd1eeG7gW4gVHLDo2ksIFE1LCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1650000000000!5m2!1svi!2s" 
             width="100%" 
@@ -101,64 +155,132 @@
             style="border:0;"
             class="rounded-3 shadow-sm mt-2">
           </iframe>
+          <!-- 
+            iframe: Thẻ nhúng trang web/bản đồ bên ngoài
+            width="100%": Rộng tràn khung
+            rounded-3: Bo góc mức 3
+            mt-2: Lề trên mức 2
+          -->
         </div>
       </div>
 
-      <!-- CỘT PHẢI: FORM & CÁC NÚT ĐIỀU HƯỚNG CÓ VIỀN -->
+      <!-- CỘT PHẢI: FORM GỬI TIN NHẮN -->
       <div class="col-md-6">
         <div class="p-4 content-box rounded-4 shadow-lg h-100 border border-warning opacity-75">
           <h2 class="text-gold fw-bold mb-3">Gửi Nhắn</h2>
+          
           <form>
+            <!-- form: Khung chứa các ô nhập tin nhắn -->
+
             <div class="mb-3">
               <label class="form-label text-gold">Họ tên:</label>
+              <!-- 
+                label: Nhãn tên ô nhập
+                form-label: Định dạng nhãn chuẩn
+              -->
+
               <input type="text" class="form-control form-control-dark" placeholder="Nhập họ và tên">
+              <!-- 
+                input: Ô nhập dòng ngắn
+                type="text": Nhập văn bản
+                form-control: Kiểu ô nhập Bootstrap
+                placeholder: Chữ gợi ý ẩn
+              -->
             </div>
             
             <div class="mb-3">
               <label class="form-label text-gold">Email:</label>
               <input type="email" class="form-control form-control-dark" placeholder="Nhập địa chỉ email">
+              <!-- type="email": Ô nhập định dạng email -->
             </div>
             
             <div class="mb-3">
               <label class="form-label text-gold">Nội dung:</label>
               <textarea class="form-control form-control-dark" rows="3" placeholder="Nhập nội dung tin nhắn"></textarea>
+              <!-- 
+                textarea: Ô nhập văn bản nhiều dòng
+                rows="3": Chiều cao bằng 3 dòng văn bản
+              -->
             </div>
             
-            <!-- HÀNG CHỨA NÚT VÀ CÁC ICON CÓ VIỀN VÀNG SÁT NÚT SẢN PHẨM -->
+            <!-- Nút bấm và icon mạng xã hội -->
             <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mt-4">
+              <!-- 
+                justify-content-between: Đẩy các nhóm ra 2 mép
+                flex-wrap: Tự động xuống dòng khi thiếu không gian
+                gap-2: Khoảng cách các phần tử mức 2
+                mt-4: Lề trên mức 4
+              -->
               <div class="d-flex align-items-center gap-2">
+                <!-- align-items-center: Căn thẳng hàng theo chiều dọc -->
+
                 <button type="button" class="btn btn-gold px-4">Gửi</button>
+                <!-- 
+                  button: Nút bấm
+                  px-4: Lề trong trái/phải mức 4
+                -->
+
                 <a href="index1.html" class="btn btn-outline-info">Giới Thiệu</a>
+                <!-- btn-outline-info: Nút viền màu xanh thông tin -->
+
                 <a href="index.html" class="btn btn-outline-warning">Sản Phẩm</a>
+                <!-- btn-outline-warning: Nút viền màu vàng cảnh báo -->
               </div>
 
-              <!-- CÁC ICON CÓ VIỀN NẰM SÁT CẠNH NÚT SẢN PHẨM -->
-            <div class="text-center mt-4 pt-3 border-top border-secondary">
-              <div class="d-flex justify-content-center gap-3">
-                <a href="https://www.twitter.com" target="_blank" class="btn btn-outline-warning social-avatar rounded-circle">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.facebook.com" target="_blank" class="btn btn-outline-warning social-avatar rounded-circle">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com" target="_blank" class="btn btn-outline-warning social-avatar rounded-circle">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.gmail.com" target="_blank" class="btn btn-outline-warning social-avatar rounded-circle">
-                  <i class="fas fa-envelope"></i>
-                </a>
+              <!-- Dãy icon mạng xã hội -->
+              <div class="text-center mt-4 pt-3 border-top border-secondary">
+                <!-- 
+                  pt-3: Lề trong phía trên mức 3
+                  border-top: Viền ở cạnh trên
+                  border-secondary: Viền màu xám
+                -->
+                <div class="d-flex justify-content-center gap-3">
+                  <!-- gap-3: Khoảng cách giữa các icon mức 3 -->
+
+                  <a href="https://www.twitter.com" target="_blank" class="btn btn-outline-warning social-avatar rounded-circle">
+                    <!-- 
+                      target="_blank": Mở trang liên kết trong tab mới
+                      rounded-circle: Bo tròn tuyệt đối thành hình tròn
+                    -->
+                    <i class="fab fa-twitter"></i>
+                    <!-- 
+                      i: Thẻ chứa icon
+                      fab fa-twitter: Class hiển thị logo Twitter từ FontAwesome
+                    -->
+                  </a>
+
+                  <a href="https://www.facebook.com" target="_blank" class="btn btn-outline-warning social-avatar rounded-circle">
+                    <i class="fab fa-facebook-f"></i>
+                    <!-- fab fa-facebook-f: Class logo Facebook -->
+                  </a>
+
+                  <a href="https://www.instagram.com" target="_blank" class="btn btn-outline-warning social-avatar rounded-circle">
+                    <i class="fab fa-instagram"></i>
+                    <!-- fab fa-instagram: Class logo Instagram -->
+                  </a>
+
+                  <a href="https://www.gmail.com" target="_blank" class="btn btn-outline-warning social-avatar rounded-circle">
+                    <i class="fas fa-envelope"></i>
+                    <!-- fas fa-envelope: Class biểu tượng Hòm thư/Email -->
+                  </a>
+                </div>
               </div>
             </div>
           </form>
         </div>
       </div>
-
     </div>
   </div>
   
-  <!-- FOOTER -->
+  <!-- FOOTER (CHÂN TRANG) -->
   <footer class="p-3 bg-dark text-center mt-auto border-top border-warning">
+    <!-- 
+      footer: Thẻ chân trang
+      mt-auto: Tự đẩy footer xuống đáy
+      border-top: Viền phía trên
+    -->
     <p class="m-0 text-gold font-monospace">©MinhShop</p>
+    <!-- font-monospace: Font chữ kiểu máy tính -->
   </footer>
 
 </body>

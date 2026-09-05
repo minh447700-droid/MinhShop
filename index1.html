@@ -1,72 +1,144 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MinhShop</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Nền đen sang trọng */
-    body {
-      background-color: #0f1217;
-      color: #e0e6ed;
-    }
+<!-- Thẻ gốc, ngôn ngữ tiếng Việt -->
 
-    /* Màu vàng kim (Gold) */
+<head>
+  <!-- Chứa cấu hình trang web -->
+
+  <meta charset="UTF-8">
+  <!-- Hiển thị tiếng Việt không lỗi font -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Co giãn vừa vặn màn hình điện thoại -->
+
+  <title>MinhShop</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Nhúng giao diện Bootstrap 5 -->
+
+  <style>
+    /* CSS tùy chỉnh */
+    body {
+      background-color: #0f1217; /* Nền tối */
+      color: #e0e6ed;            /* Chữ xám sáng */
+    }
     .text-gold {
-      color: #ffd700 !important;
+      color: #ffd700 !important; /* Chữ màu vàng kim */
     }
     .btn-gold {
-      background-color: #d4af37;
-      color: #000;
-      font-weight: bold;
-      border: none;
+      background-color: #d4af37; /* Nút màu vàng */
+      color: #000;                /* Chữ đen */
+      font-weight: bold;          /* Chữ in đậm */
+      border: none;               /* Xóa viền nút */
     }
     .btn-gold:hover {
-      background-color: #ffdf00;
+      background-color: #ffdf00; /* Đổi màu khi di chuột vào nút */
       color: #000;
     }
-
-    /* Khung sản phẩm màu xanh biển viền vàng */
     .product-card {
-      background-color: #16222f;
-      border: 1px solid #d4af37;
-      border-radius: 12px;
+      background-color: #16222f; /* Nền khung sản phẩm */
+      border: 1px solid #d4af37; /* Viền vàng */
+      border-radius: 12px;       /* Bo góc khung */
     }
-
-    /* Thẻ chi tiết sản phẩm */
     .detail-box {
-      background-color: #16222f;
-      border-left: 4px solid #d4af37;
+      background-color: #16222f; /* Nền khung chi tiết */
+      border-left: 4px solid #d4af37; /* Viền dày bên trái */
     }
-
-    /* Khung Đăng nhập */
     .form-box {
-      background-color: #16222f;
-      border: 1px solid #1d3557;
+      background-color: #16222f; /* Nền khung form */
+      border: 1px solid #1d3557; /* Viền mỏng xanh */
     }
   </style>
 </head>
-<body class="d-flex flex-column min-vh-100">
 
-  <!-- 1. HEADER -->
+<body class="d-flex flex-column min-vh-100">
+  <!-- 
+    body: Thẻ chứa nội dung
+    d-flex: Bật Flexbox
+    flex-column: Xếp dọc các khối
+    min-vh-100: Đẩy Footer luôn dính đáy màn hình
+  -->
+
+  <!-- 1. HEADER (ĐẦU TRANG) -->
   <div class="p-3 bg-dark text-center border-bottom border-warning shadow-sm">
+    <!-- 
+      div: Khối chứa
+      p-3: Lề trong mức 3
+      bg-dark: Nền màu tối
+      text-center: Căn giữa chữ
+      border-bottom: Viền ở cạnh dưới
+      border-warning: Viền màu vàng
+      shadow-sm: Đổ bóng nhẹ
+    -->
     <h1 class="m-0 fw-bold text-gold">MinhShop</h1>
+    <!-- 
+      h1: Tiêu đề lớn nhất
+      m-0: Bỏ lề ngoài
+      fw-bold: Chữ in đậm
+      text-gold: Chữ màu vàng kim
+    -->
   </div>
 
   <!-- 2. DANH SÁCH SẢN PHẨM -->
   <div class="container my-5">
+    <!-- 
+      container: Gom gọn nội dung vào giữa
+      my-5: Lề trên/dưới mức 5
+    -->
     <h3 class="text-center mb-4 text-gold fw-bold">Danh Sách Sản Phẩm</h3>
+    <!-- 
+      h3: Tiêu đề cấp 3
+      mb-4: Lề dưới mức 4
+    -->
+    
     <div class="row g-4 justify-content-center">
+      <!-- 
+        row: Hàng trong hệ thống lưới
+        g-4: Khoảng cách giữa các ô mức 4
+        justify-content-center: Căn các ô ra giữa
+      -->
       
       <!-- Sản phẩm 1 -->
       <div class="col-6 col-md-3">
+        <!-- 
+          col-6: Màn hình nhỏ hiện 2 cột (50%)
+          col-md-3: Màn hình vừa/lớn hiện 4 cột (25%)
+        -->
         <div class="card p-3 text-center product-card shadow h-100">
+          <!-- 
+            card: Khung dạng thẻ
+            p-3: Lề trong mức 3
+            shadow: Đổ bóng vừa
+            h-100: Chiều cao 100% bằng cột bên
+          -->
           <h5 class="fw-bold text-white">Laptop Gaming</h5>
+          <!-- 
+            h5: Tiêu đề cấp 5
+            text-white: Chữ màu trắng
+          -->
+          
           <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500" class="w-100 my-2 rounded" style="height: 180px; object-fit: contain; background: #fff;" alt="Laptop Gaming">
+          <!-- 
+            img: Thẻ hiển thị hình ảnh
+            w-100: Chiều rộng 100%
+            my-2: Lề trên/dưới mức 2
+            rounded: Bo góc nhẹ
+            alt: Chữ thay thế khi ảnh lỗi
+          -->
+          
           <p class="fw-bold text-gold fs-5">20.000.000đ</p>
+          <!-- fs-5: Cỡ chữ mức 5 -->
+
           <a href="#sp1" class="btn btn-gold mb-2">Xem chi tiết</a>
+          <!-- 
+            a: Link bấm
+            href="#sp1": Nhảy tới phần có id="sp1"
+            btn: Định dạng kiểu nút
+            mb-2: Lề dưới mức 2
+          -->
+
           <a href="index3.html" class="btn btn-primary fw-bold">Mua ngay</a>
+          <!-- btn-primary: Nút màu xanh dương -->
         </div>
       </div>
 
@@ -96,12 +168,17 @@
   </div>
 
   <hr class="container my-5 border-warning opacity-25">
+  <!-- 
+    hr: Thẻ đường gạch ngang
+    opacity-25: Làm mờ 25%
+  -->
 
   <!-- 3. PHẦN CHI TIẾT SẢN PHẨM -->
   <div class="container my-4">
     <h3 class="text-center mb-4 text-gold fw-bold">Chi Tiết Sản Phẩm</h3>
     
     <div id="sp1" class="p-3 mb-3 detail-box rounded shadow-sm">
+      <!-- id="sp1": Đích đến của liên kết #sp1 -->
       <h5 class="text-gold fw-bold">1. Laptop Gaming</h5>
       <p class="m-0 text-light">Mô tả: Chip Intel i7, RAM 16GB, SSD 512GB. Thích hợp chơi game và học tập.</p>
     </div>
@@ -119,33 +196,65 @@
 
   <hr class="container my-5 border-warning opacity-25">
 
-  <!-- 4. ĐĂNG NHẬP THÀNH VIÊN (ĐÃ BỎ THANH GHI NHỚ) -->
+  <!-- 4. FORM ĐĂNG NHẬP THÀNH VIÊN -->
   <div class="container my-4 p-4 form-box rounded-4 shadow-lg border border-warning opacity-75" style="max-width: 450px;">
+    <!-- max-width: Giới hạn chiều rộng tối đa -->
     <h3 class="text-center text-gold fw-bold mb-1">Tạo tài khoản Thành Viên</h3>
+    <!-- mb-1: Lề dưới mức 1 -->
+
     <p class="text-center text-secondary small mb-4">Tạo để nhận ưu đãi tích điểm mua hàng</p>
+    <!-- 
+      text-secondary: Chữ màu xám
+      small: Cỡ chữ nhỏ
+    -->
     
     <form>
+      <!-- form: Khung chứa các ô nhập liệu -->
+      
       <div class="mb-3">
         <label class="form-label text-gold small fw-bold">Tên đăng nhập / Email:</label>
+        <!-- 
+          label: Nhãn tên ô nhập
+          form-label: Định dạng nhãn chuẩn Bootstrap
+        -->
+
         <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="Nhập tài khoản">
+        <!-- 
+          input: Ô nhập dữ liệu
+          type="text": Ô nhập văn bản
+          form-control: Định dạng ô nhập chuẩn Bootstrap
+          placeholder: Chữ gợi ý ẩn
+        -->
       </div>
       
       <div class="mb-4">
         <label class="form-label text-gold small fw-bold">Mật khẩu:</label>
         <input type="password" class="form-control bg-dark text-white border-secondary" placeholder="Nhập mật khẩu">
+        <!-- type="password": Ô nhập mật khẩu (che ký tự) -->
       </div>
 
       <button type="button" class="btn btn-gold w-100 fw-bold py-2 mb-3">Đăng Nhập</button>
+      <!-- 
+        button: Nút bấm gửi/thực thi
+        w-100: Rộng 100%
+        py-2: Lề trong trên/dưới mức 2
+      -->
 
       <div class="d-flex justify-content-center gap-2">
         <a href="index1.html" class="btn btn-outline-info px-3">Giới Thiệu</a>
         <a href="index2.html" class="btn btn-outline-warning px-3">Liên Hệ</a>
+        <!-- btn-outline-warning: Nút viền màu vàng -->
       </div>
     </form>
   </div>
 
-  <!-- 5. FOOTER -->
+  <!-- 5. FOOTER (CHÂN TRANG) -->
   <footer class="p-3 bg-dark text-center mt-auto border-top border-warning">
+    <!-- 
+      footer: Thẻ chân trang
+      mt-auto: Tự đẩy footer xuống đáy
+      border-top: Viền phía trên
+    -->
     <p class="m-0 text-gold font-monospace">©MinhShop</p>
   </footer>
 

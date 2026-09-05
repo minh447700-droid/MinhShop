@@ -1,66 +1,73 @@
-/* 1. TỔNG THỂ TRANG */
+/* ==========================================
+   1. TỔNG THỂ TRANG
+   ========================================== */
 body {
-  background-color: #0f1217 !important; /* Nền đen nhám */
-  color: #e0e6ed !important;           /* Chữ trắng ngà dễ đọc */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f1217 !important; /* Nền tối nhám màu đen xanh */
+  color: #e0e6ed !important;            /* Màu chữ sáng, không gây mỏi mắt */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Bộ font chữ hệ thống mượt mà */
 }
-
-/* 2. MÀU SẮC CHỦ ĐẠO & CHỮ */
+/* ==========================================
+   2. MÀU SẮC CHỦ ĐẠO & CHỮ
+   ========================================== */
 .text-gold {
-  color: #ffd700 !important; /* Màu vàng kim */
+  color: #ffd700 !important; /* Ép chữ đổi sang màu vàng kim */
 }
-
-/* 3. NÚT BẤM (BUTTONS) */
+/* ==========================================
+   3. NÚT BẤM (BUTTONS)
+   ========================================== */
 .btn-gold {
-  background-color: #d4af37 !important;
-  color: #000000 !important;
-  font-weight: bold !important;
-  border: none !important;
-  transition: all 0.3s ease;
+  background-color: #d4af37 !important; /* Màu nền vàng ánh kim */
+  color: #000000 !important;            /* Chữ đen nổi bật trên nền vàng */
+  font-weight: bold !important;          /* Chữ in đậm */
+  border: none !important;               /* Xóa bỏ viền mặc định */
+  transition: all 0.3s ease;            /* Chuyển đổi hiệu ứng mượt trong 0.3giây */
 }
-
 .btn-gold:hover {
-  background-color: #ffdf00 !important;
-  color: #000000 !important;
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  background-color: #ffdf00 !important; /* Đổi sang màu vàng sáng hơn khi di chuột vào */
+  color: #000000 !important;            /* Giữ chữ màu đen */
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); /* Đổ bóng vàng kim phát sáng nhẹ xung quanh */
 }
-
-/* 4. KHUNG NỘI DUNG & CARD SẢN PHẨM (MÀU XANH BIỂN) */
+/* ==========================================
+   4. KHUNG NỘI DUNG & CARD SẢN PHẨM
+   ========================================== */
 .product-card,
 .content-box,
 .form-box {
-  background-color: #16222f !important; /* Xanh biển đậm */
-  border: 1px solid #d4af37 !important;  /* Viền vàng kim */
-  border-radius: 12px !important;
+  background-color: #16222f !important; /* Nền màu xanh biển đậm */
+  border: 1px solid #d4af37 !important;  /* Đường viền mỏng màu vàng kim */
+  border-radius: 12px !important;        /* Bo tròn 4 góc 12px */
 }
-
-/* 5. KHUNG CHI TIẾT SẢN PHẨM */
+/* ==========================================
+   5. KHUNG CHI TIẾT SẢN PHẨM
+   ========================================== */
 .detail-box {
-  background-color: #16222f !important;
-  border-left: 5px solid #d4af37 !important;
-  border-radius: 8px !important;
+  background-color: #16222f !important; /* Nền màu xanh biển đậm */
+  border-left: 5px solid #d4af37 !important; /* Đường viền dày 5px chỉ ở cạnh trái màu vàng kim */
+  border-radius: 8px !important;         /* Bo tròn 4 góc 8px */
 }
-
-/* 6. TÙY CHỈNH Ô NHẬP LIỆU (INPUT/FORM) */
+/* ==========================================
+   6. TÙY CHỈNH Ô NHẬP LIỆU (INPUT/FORM)
+   ========================================== */
 .form-control-dark,
 form input,
 form textarea {
-  background-color: #0f1217 !important;
-  color: #ffffff !important;
-  border: 1px solid #2a3d54 !important;
+  background-color: #0f1217 !important; /* Nền ô nhập liệu màu tối trùng màu body */
+  color: #ffffff !important;             /* Chữ gõ vào màu trắng tinh */
+  border: 1px solid #2a3d54 !important;  /* Đường viền xám xanh */
 }
-
+/* Khi bấm chọn/nhấp chuột vào ô nhập liệu */
 .form-control-dark:focus,
 form input:focus,
 form textarea:focus {
-  background-color: #0f1217 !important;
-  color: #ffffff !important;
-  border-color: #d4af37 !important;
-  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25) !important;
+  background-color: #0f1217 !important; /* Giữ nguyên nền tối */
+  color: #ffffff !important;             /* Giữ chữ màu trắng */
+  border-color: #d4af37 !important;     /* Đổi viền sang màu vàng kim */
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25) !important; /* Đổ bóng quầng sáng màu vàng xung quanh */
 }
-
-/* 7. BẢNG BÀN ĐỒ GOOGLE MAP */
+/* ==========================================
+   7. BẢNG BÀN ĐỒ GOOGLE MAP
+   ========================================== */
 iframe {
-  border-radius: 10px;
-  border: 1px solid #1d3557 !important;
+  border-radius: 10px;                   /* Bo tròn 4 góc bản đồ 10px */
+  border: 1px solid #1d3557 !important;  /* Đường viền mỏng màu xanh tối */
 }
